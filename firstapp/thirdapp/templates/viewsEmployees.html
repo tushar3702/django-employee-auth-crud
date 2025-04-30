@@ -1,0 +1,34 @@
+{% extends "menu.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/viewEmployees.css' %}">
+{% endblock %}
+
+{% block viewEmployees %}
+<h2>Employee Details </h2>
+<h2>Click ID's For Edit </h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for emp in employees %}
+        <tr>
+            <td><a href="http://127.0.0.1:8000/secondapp/updateEmployeeForm?eno={{emp.eno}}"> {{ emp.eno }} </a> </td>
+            <td>{{ emp.ename }}</td>
+            <td>{{ emp.esal }}</td>
+            <td> <a href="http://127.0.0.1:8000/secondapp/deleteEmployee?eno={{emp.eno}}"> DELETE </a> </td>
+        </tr>
+        {% endfor %} 
+    </tbody>
+</table>
+{% endblock %}
+
+
+        

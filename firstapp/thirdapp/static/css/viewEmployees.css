@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd;
+    color: #555;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #666;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 800px; /* Fixed width */
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+th, td {
+    padding: 10px 12px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+}
+
+th {
+    background-color: #f7f7f7;
+}
+
+tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Highlight ID column */
+td:first-child {
+    background-color: #fff5f5;  /* Very light red background */
+}
+
+/* Style the DELETE link like a button */
+td a {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #cc4444;  /* Soft reddish background */
+    color: #fff;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+td a:hover {
+    background-color: #dd6666;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #cc4444; /* Soft reddish color for other links */
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #dd6666;
+}

@@ -1,0 +1,30 @@
+{% extends "menu.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/newEmployee.css' %}">
+{% endblock %}
+{% block updateEmployee %}
+
+
+<h2>Update Employee</h2>
+
+<form action="http://127.0.0.1:8000/secondapp/updateEmployee/" method="post">
+     {% csrf_token %}
+
+     <input type="hidden" name="id" value="{{emp.eno}}" >
+
+
+    <label for="id">Employee ID:</label><br>
+    <input type="number" id="id" name="eno" value="{{emp.eno}}" required><br><br>
+
+    <label for="name">Employee Name:</label><br>
+    <input type="text" id="name" name="ename" value="{{emp.ename}}" required><br><br>
+
+    <label for="salary">Salary:</label><br>
+    <input type="number" id="salary" name="esal" value="{{emp.esal}}" required><br><br>
+
+    <input type="submit" value="Update Employee">
+</form>
+
+
+{% endblock %}

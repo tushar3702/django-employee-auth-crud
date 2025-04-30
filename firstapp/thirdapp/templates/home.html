@@ -1,0 +1,9 @@
+{% extends "menu.html" %} 
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/global.css' %}">
+{%endblock%}
+{% block home %}
+    <h1> Home Page </h1>
+    <h2> Welcome🤗, {{ request.session.realname }} </h2>
+{% endblock %}

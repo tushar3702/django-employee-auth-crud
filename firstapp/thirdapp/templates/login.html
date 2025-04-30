@@ -1,0 +1,27 @@
+{% extends "menu.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+{%endblock%}
+
+{% block login %}
+
+<h2>Login Page</h2>
+
+<form action="http://127.0.0.1:8000/secondapp/loginvalidate/" method="post">
+     {% csrf_token %}
+    <label for="username">User Name:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <input type="submit" value="Sign In">
+</form>
+
+<div>
+    {% if errormsg %}
+        <h2>{{errormsg}} </h2>
+    {% endif %}
+</div>
+{% endblock %}

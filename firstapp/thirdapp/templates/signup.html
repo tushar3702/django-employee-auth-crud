@@ -1,0 +1,33 @@
+{% extends "menu.html" %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock %}
+
+{% block Signup %}
+
+<h2>Add New Employee</h2>
+
+<form action="http://127.0.0.1:8000/secondapp/saveuser/" method="post">
+     {% csrf_token %}
+    <label for="username">User Name:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="text" id="password" name="password" required><br><br>
+
+    <label for="realname">Real Name:</label><br>
+    <input type="text" id="realname" name="realname" required><br><br>
+
+    <input type="submit" value="Sign Up">
+</form>
+
+<div>
+    {% if errormsg %}
+        <h2>{{errormsg}} </h2>
+    {% endif %}
+</div>
+
+{% endblock %}

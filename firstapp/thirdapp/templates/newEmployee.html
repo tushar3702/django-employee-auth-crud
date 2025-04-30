@@ -1,0 +1,27 @@
+{% extends "menu.html" %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/newEmployee.css' %}">
+{% endblock%}
+
+{% block newEmployee %}
+
+<h2>Add New Employee</h2>
+
+<form action="http://127.0.0.1:8000/secondapp/insertEmployee/" method="post">
+     {% csrf_token %}
+    <label for="id">Employee ID:</label><br>
+    <input type="number" id="id" name="eno" required><br><br>
+
+    <label for="name">Employee Name:</label><br>
+    <input type="text" id="name" name="ename" required><br><br>
+
+    <label for="salary">Salary:</label><br>
+    <input type="number" id="salary" name="esal" required><br><br>
+
+    <input type="submit" value="Add Employee">
+</form>
+
+{% endblock newEmployee %}

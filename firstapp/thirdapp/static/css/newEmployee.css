@@ -1,0 +1,62 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Compact form */
+form {
+    width: 90%;
+    max-width: 360px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 2px; /* reduced from 6px */
+    font-size: 14px;
+    color: #555;
+}
+
+/* Input field styling */
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 6px 8px; /* reduced padding */
+    margin-bottom: 12px; /* reduced margin */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #cc4444;  /* Soft reddish background */
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #dd6666;
+}
